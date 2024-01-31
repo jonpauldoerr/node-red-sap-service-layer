@@ -66,6 +66,7 @@ async function login(node, idAuth) {
 
   const host = globalContext.get(`_YOU_SapServiceLayer_${idAuth}.host`);
   const port = globalContext.get(`_YOU_SapServiceLayer_${idAuth}.port`);
+  const prefix = globalContext.get(`_YOU_SapServiceLayer_${idAuth}.prefix`)
   const version = globalContext.get(`_YOU_SapServiceLayer_${idAuth}.version`);
 
   const url = `https://${host}:${port}/b1s/${version}/Login`;
@@ -168,7 +169,7 @@ function generateRequest(node, msg, config, options) {
   options.service = options.service || null;
   options.manipulateMethod = options.manipulateMethod || null;
 
-  const { idAuthNode, host, port, version, cookies } = getSapParams(node, msg, config);
+  const { idAuthNode, host, port, prefix, version, cookies } = getSapParams(node, msg, config);
 
   let rawQuery = null;
   let url;
@@ -324,6 +325,7 @@ function getSapParams(node, msg) {
     const idAuthNode = msg._YOU_SapServiceLayer.idAuth;
     const host = globalContext.get(`_YOU_SapServiceLayer_${idAuthNode}.host`);
     const port = globalContext.get(`_YOU_SapServiceLayer_${idAuthNode}.port`);
+    const prefix = globalContext.get(`_YOU_SapServiceLayer_${idAuthNode}.prefix`);
     const version = globalContext.get(`_YOU_SapServiceLayer_${idAuthNode}.version`);
 
     // if (!flowContext.get(`_YOU_SapServiceLayer_${idAuthNode}.headers`)) {
@@ -331,7 +333,7 @@ function getSapParams(node, msg) {
     // }
     const cookies = globalContext.get(`_YOU_SapServiceLayer_${idAuthNode}.headers`).join(';');
 
-    return { idAuthNode: idAuthNode, host: host, port: port, version: version, cookies: cookies };
+    return { idAuthNode: idAuthNode, host: host, port: port, prefix: prefix, version: version, cookies: cookies };
   } catch (error) {
     throw new Error('Authentication failed');
   }

@@ -6,6 +6,7 @@
       name: {value: ''},
       host: {value: ''},
       port: {value: ''},
+      prefix: {value: ''},
       version: {value: ''}
     },
     credentials: {
@@ -54,6 +55,11 @@
   </div>
 
   <div class="form-row">
+    <label for="node-input-prefix"><i class="fa fa-cogs"></i> Prefix</label>
+    <input type="text" id="node-input-prefix" placeholder="Prefix">
+  </div>
+
+  <div class="form-row">
     <label for="node-input-version"><i class="fa fa-cogs"></i> Version</label>
     <select name="node-input-version" id="node-input-version">
       <option value="v1">v1</option>
@@ -98,6 +104,10 @@
             <span class="property-type">number</span>
           </dt>
           <dd> Service layer's port </dd>
+          <dt>Prefix
+            <span class="property-type">string</span>
+          </dt>
+          <dd> Service Layer Prefix</dd>
           <dt>Version
             <span class="property-type">[v1,v2]</span>
           </dt>

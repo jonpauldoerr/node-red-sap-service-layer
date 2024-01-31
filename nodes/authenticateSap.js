@@ -14,6 +14,7 @@ module.exports = function (RED) {
     globalContext.set(`_YOU_SapServiceLayer_${node.id}`, {
       host: config.host,
       port: config.port,
+      prefix: config.prefix,
       version: config.version,
       credentials: {
         CompanyDB: node.credentials.company,
