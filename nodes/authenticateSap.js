@@ -11,10 +11,10 @@ module.exports = function (RED) {
 
     const globalContext = node.context().global;
 
-    globalContext.set(`_YOU_SapServiceLayer_${node.id}`, {
+    globalContext.set(`SAP_B1_Service_Layer${node.id}`, {
       host: config.host,
       port: config.port,
-      prefix: config.prefix,
+      postfix: config.postfix,
       version: config.version,
       credentials: {
         CompanyDB: node.credentials.company,
@@ -31,13 +31,13 @@ module.exports = function (RED) {
       // If Company setted from msg
       if (node.credentials.companyType == 'msg') {
         const company = msg[node.credentials.company];
-        globalContext.set(`_YOU_SapServiceLayer_${node.id}.credentials.CompanyDB`, company);
+        globalContext.set(`SAP_B1_Service_Layer${node.id}.credentials.CompanyDB`, company);
       }
 
       // If User setted from msg
       if (node.credentials.userType == 'msg') {
         const user = msg[node.credentials.user];
-        globalContext.set(`_YOU_SapServiceLayer_${node.id}.credentials.UserName`, user);
+        globalContext.set(`SAP_B1_Service_Layer${node.id}.credentials.UserName`, user);
       }
 
       // reset status
@@ -49,16 +49,16 @@ module.exports = function (RED) {
         return;
       }
 
-      const headers = globalContext.get(`_YOU_SapServiceLayer_${node.id}.headers`);
+      const headers = globalContext.get(`SAP_B1_Service_Layer${node.id}.headers`);
 
-      msg._YOU_SapServiceLayer = {
+      msg.SAP_B1_Service_Layer = {
         idAuth: node.id,
       };
 
       if (!headers) {
         try {
           const result = await Support.login(node, node.id);
-          globalContext.set(`_YOU_SapServiceLayer_${node.id}.headers`, result.headers['set-cookie']);
+          globalContext.set(`SAP_B1_Service_Layer${node.id}.headers`, result.headers['set-cookie']);
         } catch (error) {
           msg.payload = error;
           if (error.response && error.response.data) {

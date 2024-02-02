@@ -75,7 +75,7 @@ describe('authenticateSap Node', () => {
 
         // n1.id
         // flow.push({
-        //   [`_YOU_SapServiceLayer_${n1.id}.headers`]:
+        //   [`SAP_B1_Service_Layer${n1.id}.headers`]:
         // })
 
         try {
@@ -165,7 +165,7 @@ describe('authenticateSap Node', () => {
 
       sinon.stub(Support, 'login').rejects(new Error('Custom error'));
 
-      // n1.context().flow.set(`_YOU_SapServiceLayer_${n1.id}.headers`, true, 'memory1', function (error) {
+      // n1.context().flow.set(`SAP_B1_Service_Layer${n1.id}.headers`, true, 'memory1', function (error) {
       //   // console.log(error);
       // });
 
@@ -255,7 +255,7 @@ describe('authenticateSap Node', () => {
         },
       });
 
-      n1.context().flow.set(`_YOU_SapServiceLayer_${n1.id}.headers`, true, 'memory1', function (error) {
+      n1.context().flow.set(`SAP_B1_Service_Layer${n1.id}.headers`, true, 'memory1', function (error) {
         // console.log(error);
       });
 
