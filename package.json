@@ -1,10 +1,10 @@
 {
-  "name": "@yousolution/node-red-contrib-you-sap-service-layer",
+  "name": "@lmusa/node-red-contrib-sap-service-layer",
   "version": "0.1.1",
-  "description": "Unofficial module SAP Service Layer for NODE-RED",
+  "description": "Unofficial Module SAP Service Layer for Node-Red",
   "license": "MIT",
   "scripts": {
-    "update": "npm pack && mv yousolution-node-red-contrib-you-sap-service-layer-$npm_package_version.tgz ./data && cd data && npm i yousolution-node-red-contrib-you-sap-service-layer-$npm_package_version.tgz && docker-compose restart",
+    "update": "npm pack && mv lmusa-node-red-contrib-sap-service-layer-$npm_package_version.tgz ./data && cd data && npm i lmusa-node-red-contrib-sap-service-layer-$npm_package_version.tgz && docker-compose restart",
     "test": "mocha 'test/**/*.spec.js'",
     "coverage": "nyc npm run test"
   },
@@ -14,8 +14,7 @@
     "service layer",
     "API",
     "ERP",
-    "integration",
-    "youSolution.Cloud"
+    "integration"
   ],
   "author": "Andrea Trentin <andrea.trentin@yousolution.cloud>",
   "node-red": {
@@ -42,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yousolution-cloud/node-red-contrib-you-sap-service-layer.git"
+    "url": "https://github.com/"
   },
   "publishConfig": {
     "access": "public"
