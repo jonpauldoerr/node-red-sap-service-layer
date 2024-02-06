@@ -65,8 +65,8 @@ async function login(node, idAuth) {
   const globalContext = node.context().global;
 
   const host = globalContext.get(`SAP_B1_Service_Layer${idAuth}.host`);
-  const port = (globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.port`)) ? ':'.concat(globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.port`)) : '';
-  const postfix = (globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.postfix`)) ? '/'.concat(globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.postfix`)) : '';
+  const port = (globalContext.get(`SAP_B1_Service_Layer${idAuth}.port`)) ? ':'.concat(globalContext.get(`SAP_B1_Service_Layer${idAuth}.port`)) : '';
+  const postfix = (globalContext.get(`SAP_B1_Service_Layer${idAuth}.postfix`)) ? '/'.concat(globalContext.get(`SAP_B1_Service_Layer${idAuth}.postfix`)) : '';
   const version = globalContext.get(`SAP_B1_Service_Layer${idAuth}.version`);
 
   const url = `https://${host}${port}${postfix}/b1s/${version}/Login`;
