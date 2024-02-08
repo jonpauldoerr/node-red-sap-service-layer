@@ -17,6 +17,9 @@
     "integration"
   ],
   "author": "Andrea Trentin <andrea.trentin@yousolution.cloud>",
+  "contributors": [
+    "Jonathan Paul Doerr <jon@lamarzocco.com>"
+  ],
   "node-red": {
     "version": ">=2.0.0",
     "nodes": {
