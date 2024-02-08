@@ -1,10 +1,10 @@
 {
-  "name": "@lmusa/node-red-contrib-sap-service-layer",
+  "name": "@jpdlm/node-red-contrib-sap-service-layer",
   "version": "0.1.1",
   "description": "Unofficial Module SAP Service Layer for Node-Red",
   "license": "MIT",
   "scripts": {
-    "update": "npm pack && mv lmusa-node-red-contrib-sap-service-layer-$npm_package_version.tgz ./data && cd data && npm i lmusa-node-red-contrib-sap-service-layer-$npm_package_version.tgz && docker-compose restart",
+    "update": "npm pack && mv jpdlm-node-red-contrib-sap-service-layer-$npm_package_version.tgz ./data && cd data && npm i jpdlm-node-red-contrib-sap-service-layer-$npm_package_version.tgz && docker-compose restart",
     "test": "mocha 'test/**/*.spec.js'",
     "coverage": "nyc npm run test"
   },
