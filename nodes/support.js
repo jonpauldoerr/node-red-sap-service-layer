@@ -64,13 +64,14 @@ const thickIdApi = [
 async function login(node, idAuth) {
   const globalContext = node.context().global;
 
-  const host = globalContext.get(`_YOU_SapServiceLayer_${idAuth}.host`);
-  const port = globalContext.get(`_YOU_SapServiceLayer_${idAuth}.port`);
-  const version = globalContext.get(`_YOU_SapServiceLayer_${idAuth}.version`);
+  const host = globalContext.get(`SAP_B1_Service_Layer${idAuth}.host`);
+  const port = (globalContext.get(`SAP_B1_Service_Layer${idAuth}.port`)) ? ':'.concat(globalContext.get(`SAP_B1_Service_Layer${idAuth}.port`)) : '';
+  const postfix = (globalContext.get(`SAP_B1_Service_Layer${idAuth}.postfix`)) ? '/'.concat(globalContext.get(`SAP_B1_Service_Layer${idAuth}.postfix`)) : '';
+  const version = globalContext.get(`SAP_B1_Service_Layer${idAuth}.version`);
 
-  const url = `https://${host}:${port}/b1s/${version}/Login`;
+  const url = `https://${host}${port}${postfix}/b1s/${version}/Login`;
 
-  const credentials = globalContext.get(`_YOU_SapServiceLayer_${idAuth}.credentials`);
+  const credentials = globalContext.get(`SAP_B1_Service_Layer${idAuth}.credentials`);
   const dataString = JSON.stringify(credentials);
 
   const options = {
@@ -111,10 +112,10 @@ async function sendRequest({ node, msg, config, axios, login, options }) {
       // try {
       // update cookies for session timeout
       const result = await login(node, requestOptions.idAuthNode);
-      globalCotext.set(`_YOU_SapServiceLayer_${requestOptions.idAuthNode}.headers`, result.headers['set-cookie']);
+      globalCotext.set(`SAP_B1_Service_Layer${requestOptions.idAuthNode}.headers`, result.headers['set-cookie']);
 
       try {
-        const headers = globalCotext.get(`_YOU_SapServiceLayer_${requestOptions.idAuthNode}.headers`).join(';');
+        const headers = globalCotext.get(`SAP_B1_Service_Layer${requestOptions.idAuthNode}.headers`).join(';');
 
         requestOptions.axiosOptions.headers.Cookie = headers;
 
@@ -168,7 +169,7 @@ function generateRequest(node, msg, config, options) {
   options.service = options.service || null;
   options.manipulateMethod = options.manipulateMethod || null;
 
-  const { idAuthNode, host, port, version, cookies } = getSapParams(node, msg, config);
+  const { idAuthNode, host, port, postfix, version, cookies } = getSapParams(node, msg, config);
 
   let rawQuery = null;
   let url;
@@ -203,28 +204,28 @@ function generateRequest(node, msg, config, options) {
   if (entity == 'script') {
     const partnerName = config.partnerName;
     const scriptName = config.scriptName;
-    url = `https://${host}:${port}/b1s/${version}/${entity}/${partnerName}/${scriptName}`;
+    url = `https://${host}${port}${postfix}/b1s/${version}/${entity}/${partnerName}/${scriptName}`;
   }
 
   const odataNextLink = msg[config.nextLink];
 
   if (!odataNextLink) {
-    url = `https://${host}:${port}/b1s/${version}/${entity}`;
+    url = `https://${host}${port}${postfix}/b1s/${version}/${entity}`;
   }
 
   if (options.isCrossJoin) {
-    url = `https://${host}:${port}/b1s/${version}/$crossjoin(${entity})`;
+    url = `https://${host}${port}${postfix}/b1s/${version}/$crossjoin(${entity})`;
   }
 
   if (options.isSQLQuery) {
     if (!config.sqlCode) {
       throw new Error('Missing sqlCode');
     }
-    url = `https://${host}:${port}/b1s/${version}/SQLQueries('${msg[config.sqlCode]}')/List`;
+    url = `https://${host}${port}${postfix}/b1s/${version}/SQLQueries('${msg[config.sqlCode]}')/List`;
   }
 
   if (odataNextLink) {
-    url = `https://${host}:${port}/b1s/${version}/${odataNextLink}`;
+    url = `https://${host}${port}${postfix}/b1s/${version}/${odataNextLink}`;
   }
   if (options.isClose && !options.hasEntityId) {
     throw new Error(`The options are not correct. If 'isClose' is true then 'hasEntityId' must be true.`);
@@ -252,9 +253,9 @@ function generateRequest(node, msg, config, options) {
     }
 
     if (thickIdApi.includes(entity) || config.entity === 'UDT') {
-      url = `https://${host}:${port}/b1s/${version}/${entity}('${entityId}')`;
+      url = `https://${host}${port}${postfix}/b1s/${version}/${entity}('${entityId}')`;
     } else {
-      url = `https://${host}:${port}/b1s/${version}/${entity}(${entityId})`;
+      url = `https://${host}${port}${postfix}/b1s/${version}/${entity}(${entityId})`;
     }
 
     if (options.isClose) {
@@ -266,15 +267,15 @@ function generateRequest(node, msg, config, options) {
         throw new Error('Missing method');
       }
       if (thickIdApi.includes(entity)) {
-        url = `https://${host}:${port}/b1s/${version}/${entity}('${entityId}')/${config.manipulateMethod}`;
+        url = `https://${host}${port}${postfix}/b1s/${version}/${entity}('${entityId}')/${config.manipulateMethod}`;
       } else {
-        url = `https://${host}:${port}/b1s/${version}/${entity}(${entityId})/${config.manipulateMethod}`;
+        url = `https://${host}${port}${postfix}/b1s/${version}/${entity}(${entityId})/${config.manipulateMethod}`;
       }
     }
   }
 
   if (config.service) {
-    url = `https://${host}:${port}/b1s/${version}/${config.service}`;
+    url = `https://${host}${port}${postfix}/b1s/${version}/${config.service}`;
   }
 
   if (options.isCreateSQLQuery) {
@@ -287,7 +288,7 @@ function generateRequest(node, msg, config, options) {
     if (!config.sqlText) {
       throw new Error('Missing sqlText');
     }
-    url = `https://${host}:${port}/b1s/${version}/SQLQueries`;
+    url = `https://${host}${port}${postfix}/b1s/${version}/SQLQueries`;
   }
 
   if (rawQuery && !odataNextLink) {
@@ -296,7 +297,7 @@ function generateRequest(node, msg, config, options) {
     url = `${url}${urlOdata}`;
   }
 
-  // const cookies = flowContext.get(`_YOU_SapServiceLayer_${idAuthNode}.headers`).join(';');
+  // const cookies = flowContext.get(`SAP_B1_Service_Layer${idAuthNode}.headers`).join(';');
   const headers = { ...msg[config.headers], Cookie: cookies };
 
   let axiosOptions = {
@@ -321,17 +322,18 @@ function getSapParams(node, msg) {
   try {
     const globalContext = node.context().global;
 
-    const idAuthNode = msg._YOU_SapServiceLayer.idAuth;
-    const host = globalContext.get(`_YOU_SapServiceLayer_${idAuthNode}.host`);
-    const port = globalContext.get(`_YOU_SapServiceLayer_${idAuthNode}.port`);
-    const version = globalContext.get(`_YOU_SapServiceLayer_${idAuthNode}.version`);
+    const idAuthNode = msg.SAP_B1_Service_Layer.idAuth;
+    const host = globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.host`);
+    const port = (globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.port`)) ? ':'.concat(globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.port`)) : '';
+    const postfix = (globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.postfix`)) ? '/'.concat(globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.postfix`)) : '';
+    const version = globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.version`);
 
-    // if (!flowContext.get(`_YOU_SapServiceLayer_${idAuthNode}.headers`)) {
+    // if (!flowContext.get(`SAP_B1_Service_Layer${idAuthNode}.headers`)) {
     //   throw new Error('Authentication failed');
     // }
-    const cookies = globalContext.get(`_YOU_SapServiceLayer_${idAuthNode}.headers`).join(';');
+    const cookies = globalContext.get(`SAP_B1_Service_Layer${idAuthNode}.headers`).join(';');
 
-    return { idAuthNode: idAuthNode, host: host, port: port, version: version, cookies: cookies };
+    return { idAuthNode: idAuthNode, host: host, port: port, postfix: postfix, version: version, cookies: cookies };
   } catch (error) {
     throw new Error('Authentication failed');
   }

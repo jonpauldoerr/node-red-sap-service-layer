@@ -1,19 +1,20 @@
 <script type="text/javascript">
   RED.nodes.registerType('authenticateSap',{
-    category: 'Sap',
+    category: 'SAP_SL',
     color: '#FFC300',
     defaults: {
       name: {value: ''},
       host: {value: ''},
       port: {value: ''},
+      postfix: {value: ''},
       version: {value: ''}
     },
     credentials: {
-      company: {type: "string"},
+      company: {type: 'string'},
       companyType: {type: 'string'},
-      user: {type:"string"},
+      user: {type:'string'},
       userType: {type: 'string'},
-      password: {type:"password"}
+      password: {type: 'password'}
     },
     inputs:1,
     outputs:1,
@@ -51,6 +52,11 @@
   <div class="form-row">
     <label for="node-input-port"><i class="fa fa-cogs"></i> Port</label>
     <input type="text" id="node-input-port" placeholder="Port">
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-postfix"><i class="fa fa-cogs"></i> Postfix</label>
+    <input type="text" id="node-input-postfix" placeholder="postfix">
   </div>
 
   <div class="form-row">
@@ -98,6 +104,10 @@
             <span class="property-type">number</span>
           </dt>
           <dd> Service layer's port </dd>
+          <dt>Postfix
+            <span class="property-type">string</span>
+          </dt>
+          <dd> Service Layer URL Postfix</dd>
           <dt>Version
             <span class="property-type">[v1,v2]</span>
           </dt>

@@ -21,16 +21,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -40,7 +40,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -70,7 +70,7 @@ describe('support library', () => {
         query: { select: ['ItemCode', 'ItemName'] },
       };
       const msg2 = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         myHeaders: { Prefer: 'odata.maxpagesize=5' },
@@ -98,16 +98,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -117,7 +117,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 1,
@@ -165,16 +165,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -184,7 +184,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -213,16 +213,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -232,7 +232,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         nextLink: 'BusinessPartners?$select=CardCode&$skip=50005',
@@ -264,16 +264,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -283,7 +283,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 1,
@@ -314,16 +314,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -333,7 +333,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         DocEntry: 1,
@@ -366,16 +366,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -385,7 +385,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -407,16 +407,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -426,7 +426,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         Code: '0001',
@@ -459,16 +459,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -478,7 +478,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -500,16 +500,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -530,7 +530,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -561,16 +561,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -580,7 +580,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         DocEntry: 1,
@@ -611,16 +611,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -630,7 +630,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         DocEntry: 1,
@@ -663,16 +663,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -682,7 +682,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 3,
@@ -715,16 +715,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -734,7 +734,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 3,
@@ -757,16 +757,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -776,7 +776,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 3,
@@ -799,16 +799,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -818,7 +818,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 3,
@@ -841,16 +841,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -860,7 +860,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 3,
@@ -893,16 +893,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -912,7 +912,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 3,
@@ -944,16 +944,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -963,7 +963,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 3,
@@ -995,16 +995,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -1014,7 +1014,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
         entityId: 3,
@@ -1046,16 +1046,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -1065,7 +1065,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -1105,16 +1105,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -1126,7 +1126,7 @@ describe('support library', () => {
       const login = async () => Promise.resolve();
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -1149,16 +1149,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -1168,7 +1168,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -1191,16 +1191,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -1211,7 +1211,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -1249,16 +1249,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -1268,7 +1268,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -1298,16 +1298,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -1317,7 +1317,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
@@ -1356,16 +1356,16 @@ describe('support library', () => {
           return {
             global: {
               get: (param) => {
-                if (param == '_YOU_SapServiceLayer_1.host') {
+                if (param == 'SAP_B1_Service_Layer1.host') {
                   return 'host';
                 }
-                if (param == '_YOU_SapServiceLayer_1.port') {
+                if (param == 'SAP_B1_Service_Layer1.port') {
                   return 'port';
                 }
-                if (param == '_YOU_SapServiceLayer_1.version') {
+                if (param == 'SAP_B1_Service_Layer1.version') {
                   return 'version';
                 }
-                if (param == '_YOU_SapServiceLayer_1.headers') {
+                if (param == 'SAP_B1_Service_Layer1.headers') {
                   return ['header:1', 'header:2'];
                 }
               },
@@ -1376,7 +1376,7 @@ describe('support library', () => {
       };
 
       const msg = {
-        _YOU_SapServiceLayer: {
+        SAP_B1_Service_Layer: {
           idAuth: 1,
         },
       };
