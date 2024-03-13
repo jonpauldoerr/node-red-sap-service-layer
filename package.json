@@ -1,6 +1,6 @@
 {
   "name": "@jpdlm/node-red-contrib-sap-service-layer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial Module SAP Service Layer for Node-Red",
   "license": "MIT",
   "scripts": {
